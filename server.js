@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
+app.use(express.static(__dirname));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const MongoClient = require('mongodb').MongoClient;
